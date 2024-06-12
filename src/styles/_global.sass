@@ -1,0 +1,65 @@
+@import "./Variables"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    background-color: $Bg-clr
+
+.calculator
+    margin: 40px auto
+    max-width: 400px
+    min-width: 400px
+    width: 400px
+    height: 440px
+    max-height: 440px
+    min-height: 440px
+    background-color: $Primary-clr
+    border-radius: 20px
+    position: relative
+    &-theme
+        position: absolute
+        z-index: 2
+        top: 10px
+        left: 10px
+    &-output
+        height: auto
+        position: relative
+        display: flex
+        flex-direction: column
+        padding: 10px
+        input
+            text-align: right
+            background: none
+            border: none
+        &-result
+            height: 50px
+            font-size: 24px
+            color: $Accent-clr
+        &-temp
+            height: 30px
+            color: $Secondary-clr
+            font-size: 18px
+    &-input
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 5px
+        padding: 10px
+        button
+            height: 60px
+            border-radius: 60px
+            border: none
+            font-size: 24px
+            background: none
+            color: $Secondary-clr
+            cursor: pointer
+            &:hover
+                background-color: $Accent-transparent-clr
+                color: $Accent-clr
+        button.with-bg
+            background-color: $Accent-transparent-clr
+            color: $Accent-clr
+        button.equal
+            grid-column: span 2
